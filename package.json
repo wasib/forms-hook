@@ -1,6 +1,6 @@
 {
   "name": "forms-hook",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A custom react hook based form management library",
   "main": "lib/index.js",
   "scripts": {
