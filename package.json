@@ -1,0 +1,28 @@
+{
+  "name": "forms-hook",
+  "version": "0.5.0",
+  "description": "A custom react hook based form management library",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasib/forms-hook.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "form",
+    "form-hook",
+    "react-hook-form",
+    "forms",
+    "react-hooks"
+  ],
+  "author": "Wasib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasib/forms-hook/issues"
+  },
+  "homepage": "https://github.com/wasib/forms-hook#readme"
+}
