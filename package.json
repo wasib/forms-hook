@@ -3,9 +3,14 @@
   "version": "0.5.2",
   "description": "A custom react hook based form management library",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "babel src/ -d lib/",
     "prepublish": "npm run build",
+    "build": "npm run prepack:babel && npm run prepack:flow",
+    "prepack:babel": "babel src/ -d lib",
+    "prepack:flow": "flow-copy-source src lib",
     "test": "test",
     "flow": "flow",
     "pretty": "prettier --write --tab-width 2 \"src/**/*.*\""
@@ -39,6 +44,7 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-flow": "^7.0.0",
     "flow-bin": "^0.111.1",
+    "flow-copy-source": "^2.0.8",
     "husky": "^3.0.9",
     "prettier": "^1.18.2",
     "react": "^16.11.0"
