@@ -29,8 +29,8 @@ import { useForm, generateSchema } from 'forms-hook';
 
 const formSchema = {
   firstName: generateSchema('text', false),
-  lastName: generateSchema('text', true),
-  age: generateSchema('number', true)
+  lastName: generateSchema('text'),
+  age: generateSchema('number')
 };
 
 function App() {
