@@ -1,13 +1,12 @@
 {
   "name": "forms-hook",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A custom react hook based form management library",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "prepublish": "npm run build",
     "build": "npm run prepack:babel && npm run prepack:flow",
     "prepack:babel": "babel src/ -d lib",
     "prepack:flow": "flow-copy-source src lib",
