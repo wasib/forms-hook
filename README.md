@@ -2,6 +2,8 @@
 
 A custom react hook based form management library built to simplify the way forms are handled. Does not interfere in any way with your default elements. Does not override any default functionality. All behaviour of the UI elements is completely user controlled. This allows for high customisability and more control over your components.
 
+[![TravisCI](https://travis-ci.org/wasib/forms-hook.svg?branch=master)](https://travis-ci.org/wasib/forms-hook)
+
 ## Features
 
 - Built with performance and simplicity in mind
