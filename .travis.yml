@@ -8,4 +8,4 @@ deploy:
   email: mohammedwasib@gmail.com
   api_key: $NPM_TOKEN
   on:
-    tags:true
+    tags: true
