@@ -39,10 +39,13 @@ export const setInitialSchema = (schema: FormSchema) => {
 };
 
 export const validateInput = (schema: InputSchema) => {
-  if (schema.required && schema.value.length === 0) {
+  if (schema.required && (!schema.value || schema.value.length === 0)) {
     schema.error = 'required';
     return schema;
+  } else {
+    schema.error = '';
   }
+
   for (let key in schema.validations) {
     if (key === 'pattern') {
       // $FlowFixMe

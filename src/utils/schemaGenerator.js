@@ -4,7 +4,7 @@ import type { InputValidations, InputSchema } from '../types/formTypes';
 
 export const generateSchema = (
   type: string,
-  required: boolean,
+  required?: boolean = true,
   placeholder?: string,
   validations?: InputValidations
 ): InputSchema => {
