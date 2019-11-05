@@ -30,7 +30,8 @@
     "form-hook",
     "react-hook-form",
     "forms",
-    "react-hooks"
+    "react-hooks",
+    "form-validation"
   ],
   "author": "Wasib",
   "license": "ISC",

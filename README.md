@@ -26,6 +26,7 @@ A custom react hook based form management library built to simplify the way form
 ## Quickstart
 
 ```jsx
+
 import React from 'react';
 import { useForm, generateSchema } from 'forms-hook';
 
@@ -57,11 +58,13 @@ function App() {
     </form>
   );
 }
+
 ```
 
 ## API Reference
 
 ```js
+
 const {
   schema,
   isSubmitDisabled,
@@ -70,6 +73,7 @@ const {
   onFormSubmit,
   resetForm
 } = useForm(initialSchema);
+
 ```
 
 where
@@ -83,17 +87,27 @@ where
 #### Schema Generator Function
 
 ```js
+
 generateSchema = (
   type: string,
   required?: boolean = true,
   placeholder?: string,
   validations?: InputValidations //types defined below
 ) => InputSchema; //types defined below
+
 ```
 
 - Generates the input schema for individual form elements. mandatory parameter is type which can be "text", "number"..etc
 - You can use the provided type constants to avoid typos. Ex:
-  `js import { useForm, generateSchema, SCHEMA_TYPE, VALIDATIONS} from 'forms-hook'; const formSchema = { userName: generateSchema(SCHEMA_TYPE.TEXT,true,"username",VALIDATIONS.USERNAME), password: generateSchema(SCHEMATYPE.PASSWORD,true,"password",VALIDATIONS.PASSWORD) }`
+
+  ```js 
+  import { useForm, generateSchema, SCHEMA_TYPE, VALIDATIONS} from 'forms-hook';
+   
+  const formSchema = { 
+    userName: generateSchema(SCHEMA_TYPE.TEXT,true,"username",VALIDATIONS.USERNAME),
+    password: generateSchema(SCHEMATYPE.PASSWORD,true,"password",VALIDATIONS.PASSWORD) 
+    }
+  ```
 - The second parameter is the required attribute. It is set to true by default.
 - The third parameter is the placeholder. it is send to empty by default.
 - The final parameter is the validations object. (defined in types below)
@@ -101,6 +115,7 @@ generateSchema = (
 ### TYPES
 
 ```js
+
 type InputValidations = {
   minValue?: number,
   maxValue?: number,
@@ -124,6 +139,7 @@ type InputSchema = {
 type FormSchema = {
   [key: string]: InputSchema
 };
+
 ```
 
 ### Contribute
