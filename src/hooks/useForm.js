@@ -27,6 +27,11 @@ export const useForm = (initialSchema: FormSchema) => {
     setSchema({ ...schema, [name]: newVal });
   };
 
+  const setRequired = (name: string, required: boolean) => {
+    let newVal = { ...schema[name], required };
+    setSchema({ ...schema, [name]: newVal });
+  };
+
   const onFormSubmit = (event: any, callback: any => void) => {
     event.preventDefault();
     if (isSubmitDisabled) {
@@ -43,6 +48,7 @@ export const useForm = (initialSchema: FormSchema) => {
     isSubmitDisabled,
     setValue,
     setValueNoValidate,
+    setRequired,
     onFormSubmit,
     resetForm
   };
